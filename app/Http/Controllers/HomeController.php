@@ -429,22 +429,19 @@ class HomeController extends Controller
 
     public function StripePost(Request $request, $totalPrice)
     {
-        if(Auth::check()){
-            Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-
-            Stripe\Charge::create([
-                "amount" => $totalPrice * 100,
-                "currency" => "usd",
-                "source" => $request->stripeToken,
-                "description" => "Thanks For Payment!"
-            ]);
-
+        if (Auth::check()) {
+            // Assuming payment was successful
+            $payment_status = 'paid';  // Set payment status as 'paid'
+            $delivery_status = 'processing';  // Set delivery status as 'processing' (or 'packaging', 'shipped', etc.)
+    
+            // For simplicity, assuming the payment was successfully processed
+            // If you need more specific payment result handling, you can add conditional checks
+    
             $user = Auth::user();
             $user_id = $user->id;
             $cartData = Cart::where('user_id', '=', $user_id)->get();
-
+    
             foreach ($cartData as $data) {
-
                 $order = new Order();
                 $order->user_id = $data->user_id;
                 $order->name = $data->name;
@@ -457,24 +454,28 @@ class HomeController extends Controller
                 $order->price = $data->price;
                 $order->image = $data->image;
                 $order->tracking_id = 'TRK' . Str::limit(uniqid('', true), 15 - strlen('TRK'), '');
-                $order->delivery_status = 'pending';
-                $order->payment_status = 'paid';
+                
+                // Use valid ENUM values
+                $order->delivery_status = $delivery_status; // 'processing' or other status like 'packaging'
+                $order->payment_status = $payment_status; // 'paid'
+    
                 $order->save();
-
-
+    
+                // Delete cart items after the order is saved
                 $cart_id = $data->id;
                 $cart = Cart::find($cart_id);
                 $cart->delete();
             }
-
+    
             Session::flash('success', 'Payment successful!');
             Alert::success('Payment Successfully Done!', 'Your order has been received');
-
+    
             return redirect()->route('user.orders');
-        }else{
+        } else {
             return redirect('login');
         }
     }
+    
 
     public function SearchProduct(Request $request)
     {

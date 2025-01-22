@@ -68,7 +68,8 @@ Route::get('/search-a-product', [HomeController::class, 'SearchProduct']);
 Route::get('/update-password', [HomeController::class, 'UpdatePassword']);
 
 
-Route::get('/cash-order', [HomeController::class, 'CashOrder']);
+
+
 Route::get('/stripe/{totalPrice}', [HomeController::class, 'Stripe']);
 Route::post('/stripe/{totalPrice}', [HomeController::class, 'StripePost'])->name('stripe.post');
 

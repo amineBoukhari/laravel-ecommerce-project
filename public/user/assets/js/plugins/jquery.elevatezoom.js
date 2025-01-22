@@ -320,7 +320,7 @@ if ( typeof Object.create !== 'function' ) {
 				self.zoomWindow.wrap(self.zoomWindowContainer);
 
 
-				//  self.captionStyle = "text-align: left;background-color: black;color: white;font-weight: bold;padding: 10px;font-family: sans-serif;font-size: 11px";                                                                                                                                                                                                                                          
+				//  self.captionStyle = "text-align: left;background-color: black;color: black;font-weight: bold;padding: 10px;font-family: sans-serif;font-size: 11px";                                                                                                                                                                                                                                          
 				// self.zoomCaption = $('<div class="elevatezoom-caption" style="'+self.captionStyle+'display: block; width: 280px;">INSERT ALT TAG</div>').appendTo(self.zoomWindow.parent());
 
 				if(self.options.zoomType == "lens") {

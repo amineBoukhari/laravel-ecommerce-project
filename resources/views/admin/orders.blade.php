@@ -50,7 +50,7 @@
                                     <th> Delivery Status </th>
                                     <th> Image</th>
                                     <th> Order Date</th>
-                                    <th>Bill</th>
+                   
                                 </tr>
                             </thead>
                             <tbody>
@@ -83,9 +83,7 @@
                                             <img src="products_images/{{$order->image}}" alt="image" />
                                         </td>
                                         <td>{{$order->created_at}}</td>
-                                        <td>
-                                            <a href="{{url('print-bill', $order->id)}}" class="btn btn-outline-info">Print Bill</a>
-                                        </td>
+                                       
                                     </tr>
                                 @endforeach
                             </tbody>
