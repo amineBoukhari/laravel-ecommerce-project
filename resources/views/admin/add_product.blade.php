@@ -258,16 +258,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group row">
-                                        <label class="col-sm-3 col-form-label">Product Image</label>
-                                        <div class="input-group col-sm-9">
-                                            <img id="showImage" style="width: 40%;border-radius: 3%;" src="/admin/assets/images/no_image.jpg" alt="product_image">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                       
                         </div>
                         </form>
                     </div>

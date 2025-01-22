@@ -112,7 +112,7 @@ class AdminController extends Controller
 
     public function AddProduct(Request $request)
     {
-        dd($userType ) ;
+       
         if (Auth::check()) {
             $userType = Auth::user()->usertype;
             if ($userType == 1) {
