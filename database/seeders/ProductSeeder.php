@@ -1,0 +1,115 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class ProductSeeder extends Seeder
+{
+    public function run()
+    {
+        DB::table('products')->insert([
+            [
+                'title' => 'Gaming Laptop',
+                'image' => 'laptop1.webp',
+                'category' => 'Laptops',
+                'quantity' => 10, // integer
+                'price' => 1200.00, // decimal
+                'discount_price' => 1100.00, // decimal
+                'screen_size' => '15.6 inch',
+                'screen_resolution' => '1920x1080',
+                'screen_refresh_rate' => '144Hz',
+                'device_weight' => '2.5kg',
+                'graphics_type' => 'Dedicated',
+                'graphics_card_memory' => '6GB',
+                'ssd_capacity' => '512GB',
+                'operating_system' => 'Windows 11',
+                'processor' => 'Intel Core i7',
+                'processor_generation' => '11th Gen',
+                'processor_type' => 'Octa-core',
+                'processor_speed' => '3.4GHz',
+                'ram' => '16GB',
+                'keyboard' => 'RGB Backlit',
+                'color' => 'Black',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Smartphone X1',
+                'image' => 'phone1.jpg',
+                'category' => 'Phones',
+                'quantity' => 50,
+                'price' => 799.00,
+                'discount_price' => 699.00,
+                'screen_size' => '6.5 inch',
+                'screen_resolution' => '2400x1080',
+                'screen_refresh_rate' => '90Hz',
+                'device_weight' => '190g',
+                'graphics_type' => 'Integrated',
+                'graphics_card_memory' => 'None',
+                'ssd_capacity' => '128GB',
+                'operating_system' => 'Android 12',
+                'processor' => 'Snapdragon 888',
+                'processor_generation' => '8th Gen',
+                'processor_type' => 'Octa-core',
+                'processor_speed' => '2.84GHz',
+                'ram' => '8GB',
+                'keyboard' => 'On-screen',
+                'color' => 'Silver',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Wireless Mouse',
+                'image' => 'mouse1.jpg',
+                'category' => 'Accessories',
+                'quantity' => 200,
+                'price' => 29.99,
+                'discount_price' => 19.99,
+                'screen_size' => 'N/A',
+                'screen_resolution' => 'N/A',
+                'screen_refresh_rate' => 'N/A',
+                'device_weight' => '100g',
+                'graphics_type' => 'N/A',
+                'graphics_card_memory' => 'N/A',
+                'ssd_capacity' => 'N/A',
+                'operating_system' => 'N/A',
+                'processor' => 'N/A',
+                'processor_generation' => 'N/A',
+                'processor_type' => 'N/A',
+                'processor_speed' => 'N/A',
+                'ram' => 'N/A',
+                'keyboard' => 'N/A',
+                'color' => 'Black',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Gaming Headset',
+                'image' => 'headset1.webp',
+                'category' => 'Accessories',
+                'quantity' => 150,
+                'price' => 99.99,
+                'discount_price' => 89.99,
+                'screen_size' => 'N/A',
+                'screen_resolution' => 'N/A',
+                'screen_refresh_rate' => 'N/A',
+                'device_weight' => '350g',
+                'graphics_type' => 'N/A',
+                'graphics_card_memory' => 'N/A',
+                'ssd_capacity' => 'N/A',
+                'operating_system' => 'N/A',
+                'processor' => 'N/A',
+                'processor_generation' => 'N/A',
+                'processor_type' => 'N/A',
+                'processor_speed' => 'N/A',
+                'ram' => 'N/A',
+                'keyboard' => 'N/A',
+                'color' => 'Red',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+    }
+}
