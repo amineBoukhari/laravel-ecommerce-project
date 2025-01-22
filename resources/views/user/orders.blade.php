@@ -120,30 +120,7 @@
                                         <th scope="col">View</th>
                                     </tr>
                                 </thead>
-                                <div class="divider center_icon mt-100 mb-30"><b>Past Orders</b></div>
-                                <tbody>
-                                    @foreach ($past_orders as $order)
-                                    <tr>
-                                        <td class="image product-thumbnail"><img src="products_images/{{$order->image}}" alt="product_image"></td>
-                                        <td>
-                                            <span style="color: #2C3333; font-weight: 400;">{{$order->tracking_id}}</span>
-                                        </td>
-                                        <td class="product-des product-name px-5">
-                                            <i style="color: #3EC70B; font-size: 17px;" class="fas fa-check-circle"></i>
-                                            <span class="product-name px-1">Product is received by user</span>
-                                        </td>
-                                        <td class="text-center" data-title="Stock">
-                                            <div class="detail-qty border radius  m-auto">
-                                                <span class="qty-val">{{$order->quantity}}</span>
-                                            </div>
-                                        </td>
-                                        <td class="text-right" data-title="Cart">
-                                            <span><i style="color: #FF7B54;" class="fas fa-dollar-sign"></i> {{$order->price}}</span>
-                                        </td>
-                                        <td class="action" data-title="View"><a href="{{url('/product_details', $order->product_id)}}" class="text-muted"><i class="fas fa-eye"></i></a></td>
-                                    </tr>
-                                    @endforeach
-                                </tbody>
+                               
                             </table>
                         </div>
                     </div>
