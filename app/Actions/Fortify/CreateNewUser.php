@@ -33,5 +33,8 @@ class CreateNewUser implements CreatesNewUsers
             'address' => $input['address'],
             'password' => Hash::make($input['password']),
         ]);
+        $user->email_verified_at = now(); // Set the email_verified_at to the current time
+        $user->save();
+
     }
 }

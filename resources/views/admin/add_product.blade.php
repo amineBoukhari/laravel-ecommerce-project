@@ -20,7 +20,7 @@
     <!-- Layout styles -->
     <link rel="stylesheet" href="admin/assets/css/style.css">
     <!-- End layout styles -->
-    <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
   <body>
